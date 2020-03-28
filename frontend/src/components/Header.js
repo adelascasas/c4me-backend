@@ -33,7 +33,7 @@ const Header = () => (
           
           <Col className="d-none d-lg-flex justify-content-end">
 			<NavItem className="d-flex align-items-center">
-              <Link to"/collegesearch" className="font-weight-bold">Search</Link>
+              <Link to="/collegesearch" className="font-weight-bold">Search</Link>
             </NavItem>
           </Col>
           
