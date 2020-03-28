@@ -1,6 +1,6 @@
 import Reac, { Component } from 'react';
 
-export default class searchcollege extends Component {
+export default class Searchcollege extends Component {
 	render(){
 		return (
 			<div>

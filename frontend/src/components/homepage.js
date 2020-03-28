@@ -1,4 +1,4 @@
-import Reac, { Component } from 'react';
+import React, { Component } from 'react';
 
 export default class homepage extends Component {
 	render(){
