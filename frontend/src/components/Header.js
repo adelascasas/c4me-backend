@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable */
+
+import React, { Component } from 'react';
 import logo from '../logo.svg';
 
 import {
@@ -8,40 +10,30 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const Header = () => (
-  <header>
-    <Navbar fixed="top" color="light" light expand="xs" className="border-bottom border-gray bg-white" style={{ height: 80 }}>
-    
-      <Container>
-        <Row noGutters className="position-relative w-100 align-items-center">
-        
-          <Col className="d-none d-lg-flex justify-content-start">
-            <Nav className="mrx-auto" navbar>
-            
-              <NavItem className="d-flex align-items-center">
-                <Link to="/" className="d-flex align-items-center">Home</Link>
-              </NavItem>
-              
-            </Nav>
-          </Col>
-          
-          <Col className="d-flex justify-content-xs-start justify-content-lg-center">
-            <NavbarBrand className="d-inline-block p-0" href="/" style={{ width: 80 }}>
-				C4me
-            </NavbarBrand>
-          </Col>
-          
-          <Col className="d-none d-lg-flex justify-content-end">
-			<NavItem className="d-flex align-items-center">
-              <Link to="/collegesearch" className="font-weight-bold">Search</Link>
-            </NavItem>
-          </Col>
-          
-        </Row>
-      </Container>
-      
-    </Navbar>
-  </header>
-);
-
-export default Header;
+export default class Header extends Component {
+	render() {
+		return (
+			<nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+				<Link to="/"className="navbar-brand" href="/">C4ME</Link>
+            			<div className="collpase navbar-collapse">
+				<ul className="navbar-nav mr-auto">
+					<li className="navbar-item">
+         				<Link to="/" className="nav-link">Home </Link>
+					</li>
+					<li className="navbar-item">
+                                        <Link to="/searchcollege" className="nav-link">Search Colleges </Link>
+                                        </li>
+				</ul>
+				<ul className="navbar-nav ml-auto">
+					<li className="navbar-item">
+					<Link to="/login" className="nav-link">Login </Link>
+					</li>
+					<li className="navbar-item">
+                                        <Link to="/create" className="nav-link">Sign up </Link>
+                                        </li>
+				</ul>
+				</div>
+			</nav>
+		);
+	}
+}
